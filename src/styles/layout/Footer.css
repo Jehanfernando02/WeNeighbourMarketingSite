@@ -1,0 +1,178 @@
+.footer {
+  background: var(--heading-color);
+  padding: 60px 0 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+}
+
+.footer-top {
+  padding-bottom: 30px;
+}
+
+.footer .footer-info .logo {
+  line-height: 0;
+  margin-bottom: 25px;
+}
+
+.footer .footer-info .logo span {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: white;
+  font-family: var(--heading-font);
+}
+
+.footer .footer-info p {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 0;
+}
+
+.footer .social-links {
+  margin-top: 30px;
+  display: flex;
+  gap: 10px;
+}
+
+.footer .social-links a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 16px;
+  border-radius: 50%;
+  transition: 0.3s;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.footer .social-links a:hover {
+  background: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+.footer h4 {
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  position: relative;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+}
+
+.footer h4::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 2px;
+  background: var(--accent-color);
+  bottom: 0;
+  left: 0;
+}
+
+.footer .footer-links {
+  margin-bottom: 30px;
+}
+
+.footer .footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer .footer-links ul li {
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+}
+
+.footer .footer-links ul li:first-child {
+  padding-top: 0;
+}
+
+.footer .footer-links ul i {
+  color: var(--accent-color);
+  font-size: 12px;
+  margin-right: 8px;
+}
+
+.footer .footer-links ul a {
+  color: rgba(255, 255, 255, 0.8);
+  transition: 0.3s;
+  display: inline-block;
+  line-height: 1;
+}
+
+.footer .footer-links ul a:hover {
+  color: white;
+  transform: translateX(5px);
+}
+
+.footer .footer-contact p {
+  line-height: 26px;
+}
+
+.footer-bottom {
+  padding: 30px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer .copyright {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.footer .copyright strong {
+  color: white;
+}
+
+.footer .download-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.footer .btn-download {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.footer .btn-download i {
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+.footer .btn-download:hover {
+  background: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 991px) {
+  .footer .footer-info {
+    text-align: center;
+  }
+
+  .footer .social-links {
+    justify-content: center;
+  }
+
+  .footer h4::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .footer .footer-links ul li {
+    justify-content: center;
+  }
+
+  .footer .footer-contact {
+    text-align: center !important;
+  }
+}

@@ -1,0 +1,213 @@
+.contact {
+  padding: 80px 0;
+  background: var(--white);
+}
+
+.contact .section-title {
+  margin-bottom: 40px;
+}
+
+.contact .info-item {
+  background: var(--surface-color);
+  padding: 30px;
+  border-radius: 15px;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.contact .info-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--box-shadow);
+}
+
+.contact .info-item i {
+  font-size: 32px;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.contact .info-item:hover i {
+  transform: scale(1.1);
+}
+
+.contact .info-item h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--heading-color);
+}
+
+.contact .info-item p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.contact .info-item p:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+/* Contact Form */
+.contact .form {
+  background: var(--surface-color);
+  padding: 40px;
+  border-radius: 15px;
+}
+
+.contact .form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact .form label {
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--heading-color);
+}
+
+.contact .form input,
+.contact .form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.contact .form input:focus,
+.contact .form textarea:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(65, 84, 241, 0.1);
+}
+
+.contact .form textarea {
+  height: 150px;
+  resize: none;
+}
+
+.contact .form button {
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact .form button:hover {
+  background: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+/* Status Messages */
+.contact .status-message {
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.contact .status-message.loading {
+  background: #e8f4ff;
+  color: #0066cc;
+}
+
+.contact .status-message.success {
+  background: #e8f8e8;
+  color: #008800;
+}
+
+.contact .status-message.error {
+  background: #ffe8e8;
+  color: #cc0000;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .contact {
+    padding: 60px 0;
+  }
+
+  .contact .form {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact .info-item {
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .contact .info-item i {
+    font-size: 28px;
+  }
+
+  .contact .info-item h3 {
+    font-size: 18px;
+  }
+
+  .contact .form {
+    padding: 25px;
+  }
+}
+
+/* Animation Classes */
+.contact [data-aos].fade-up {
+  transform: translateY(30px);
+}
+
+.contact [data-aos].fade-up.aos-animate {
+  transform: translateY(0);
+}
+
+/* Loading Animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.contact .form button.loading {
+  position: relative;
+  padding-right: 45px;
+}
+
+.contact .form button.loading::after {
+  content: '';
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--white);
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Hover Effects */
+.contact .info-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+  border-radius: 15px;
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+
+.contact .info-item:hover::before {
+  opacity: 0.05;
+}
